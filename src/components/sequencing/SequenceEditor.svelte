@@ -12,7 +12,7 @@
     OutputLanguage,
     PhoenixAdaptation,
     PhoenixContext,
-  } from '@nasa-jpl/aerie-sequence-languages';
+  } from '@nasa-jpl/plandev-sequence-languages';
   import ChevronDownIcon from '@nasa-jpl/stellar/icons/chevron_down.svg?component';
   import CollapseIcon from 'bootstrap-icons/icons/arrow-bar-down.svg?component';
   import ExpandIcon from 'bootstrap-icons/icons/arrow-bar-up.svg?component';

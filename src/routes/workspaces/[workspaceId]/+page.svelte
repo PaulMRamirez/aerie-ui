@@ -6,8 +6,8 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import { env } from '$env/dynamic/public';
-  import type { ChannelDictionary, CommandDictionary, ParameterDictionary } from '@nasa-jpl/aerie-ampcs';
-  import type { LibrarySequenceSignature, PhoenixContext, UserSequence } from '@nasa-jpl/aerie-sequence-languages';
+  import type { ChannelDictionary, CommandDictionary, ParameterDictionary } from '@nasa-jpl/plandev-ampcs';
+  import type { LibrarySequenceSignature, PhoenixContext, UserSequence } from '@nasa-jpl/plandev-sequence-languages';
   import type { IRowNode } from 'ag-grid-community';
   import { onDestroy, onMount, tick } from 'svelte';
   import PageTitle from '../../../components/app/PageTitle.svelte';

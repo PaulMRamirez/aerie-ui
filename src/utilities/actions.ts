@@ -6,7 +6,7 @@ import type {
   ActionValueSchemaFileList,
   ActionValueSchemaSequence,
   ActionValueSchemaSequenceList,
-} from '@nasa-jpl/aerie-actions';
+} from '@nasa-jpl/plandev-actions';
 import type { ActionDefinition, ActionParametersMap, ActionRunSlim } from '../types/actions';
 import type { ValueSchema, ValueSchemaOption } from '../types/schema';
 import type { WorkspaceTreeNodeWithFullPath } from '../types/workspace-tree-view';

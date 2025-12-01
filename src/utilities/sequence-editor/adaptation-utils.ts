@@ -3,7 +3,7 @@ import * as cmCommands from '@codemirror/commands';
 import * as cmLanguage from '@codemirror/language';
 import * as cmView from '@codemirror/view';
 
-import type { PhoenixAdaptation } from '@nasa-jpl/aerie-sequence-languages';
+import type { PhoenixAdaptation } from '@nasa-jpl/plandev-sequence-languages';
 import type { User } from '../../types/app';
 import effects from '../effects';
 

@@ -6,7 +6,7 @@ import type { ActionParameterPair, Workspace, WorkspaceInsertInput } from '../ty
 import type { WorkspaceTreeMap, WorkspaceTreeNode, WorkspaceTreeNodeWithFullPath } from '../types/workspace-tree-view';
 import { filterEmpty } from './generic';
 import { reqWorkspace } from './requests';
-import type { ActionValueSchema } from '@nasa-jpl/aerie-actions';
+import type { ActionValueSchema } from '@nasa-jpl/plandev-actions';
 import { pathMatchesExtensionPattern } from './parameters';
 
 export function mapWorkspaceTreePaths(nodes: WorkspaceTreeNode[], currentPath: string[] = []): WorkspaceTreeMap {
