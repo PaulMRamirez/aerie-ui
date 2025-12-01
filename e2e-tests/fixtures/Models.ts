@@ -12,7 +12,7 @@ export class Models {
   inputFile: Locator;
   inputName: Locator;
   inputVersion: Locator;
-  jarPath: string = 'e2e-tests/data/banananation-develop.jar'; // TODO: Pull .jar from aerie project.
+  jarPath: string = 'e2e-tests/data/banananation-develop.jar'; // TODO: Pull .jar from plandev project.
   modelId: string;
   modelName: string;
   modelVersion: string = '1.0.0';

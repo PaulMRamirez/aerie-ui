@@ -26,7 +26,7 @@ vi.spyOn(effects, 'getVersion').mockResolvedValue({
   commit: 'unknown',
   commitUrl: '',
   date: new Date().toLocaleString(),
-  name: 'aerie-ui',
+  name: 'plandev-ui',
 });
 
 const mockMergeRequest: PlanMergeRequestSchema = {

@@ -7997,7 +7997,7 @@ const effects = {
       }
 
       if (dictionary.split('\n').find(line => /^PROJECT\s*:\s*"([^"]*)"/.test(line))) {
-        // convert cdl to ampcs format, consider moving to aerie backend after decision on XTCE
+        // convert cdl to ampcs format, consider moving to plandev backend after decision on XTCE
         // eslint-disable-next-line no-control-regex
         dictionary = toAmpcsXml(parseCdlDictionary(dictionary)).replaceAll(/[^\x00-\x7F]+/g, '');
       }
@@ -8118,14 +8118,14 @@ const effects = {
         }
       }
 
-      // The aerie gateway mangles the names of uploaded files to ensure uniqueness.
+      // The plandev gateway mangles the names of uploaded files to ensure uniqueness.
       // Here, we use the ids of the files we just uploaded to look up the generated filenames
       const generatedFilenames: Record<string, string> = {};
       for (const newFile of files) {
         const id = originalFilenameToId[newFile.name];
         const response = (await reqHasura<[{ name: string }]>(gql.GET_UPLOADED_FILENAME, { id }, user)).uploaded_file;
         if (response !== null) {
-          generatedFilenames[newFile.name] = `${env.PUBLIC_AERIE_FILE_STORE_PREFIX}${response[0].name}`;
+          generatedFilenames[newFile.name] = `${env.PUBLIC_PLANDEV_FILE_STORE_PREFIX}${response[0].name}`;
         }
       }
 

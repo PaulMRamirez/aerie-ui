@@ -6,7 +6,7 @@ on:
       - develop
       - dev-[0-9]+.[0-9]+.[0-9]+
     types:
-      # defaults + 'edited', to handle changes to flags like ___REQUIRES_AERIE_PR___ in the PR body
+      # defaults + 'edited', to handle changes to flags like ___REQUIRES_PLANDEV_PR___ in the PR body
       [opened, synchronize, reopened, edited]
   push:
     branches:
@@ -22,8 +22,8 @@ on:
         required: false
 
 env:
-  AERIE_PASSWORD: '${{secrets.AERIE_PASSWORD}}'
-  AERIE_USERNAME: '${{secrets.AERIE_USERNAME}}'
+  PLANDEV_PASSWORD: '${{secrets.PLANDEV_PASSWORD}}'
+  PLANDEV_USERNAME: '${{secrets.PLANDEV_USERNAME}}'
   HASURA_GRAPHQL_ADMIN_SECRET: '${{secrets.HASURA_GRAPHQL_ADMIN_SECRET}}'
   HASURA_GRAPHQL_JWT_SECRET: '${{secrets.HASURA_GRAPHQL_JWT_SECRET}}'
   POSTGRES_USER: '${{secrets.POSTGRES_USER}}'
@@ -73,21 +73,21 @@ jobs:
         with:
           node-version: '22.17.1'
           cache: npm
-      - name: Extract Aerie backend docker tag from PR body
-        # look in the PR body for eg. the string ___REQUIRES_AERIE_PR___=9999, extract the number & save to env var
+      - name: Extract PlanDev backend docker tag from PR body
+        # look in the PR body for eg. the string ___REQUIRES_PLANDEV_PR___=9999, extract the number & save to env var
         # if backend PR is labeled correctly, it will publish a docker tag called 'pr-9999' to use in tests
-        if: ${{ contains(env.PR_BODY, '___REQUIRES_AERIE_PR___=') }}
+        if: ${{ contains(env.PR_BODY, '___REQUIRES_PLANDEV_PR___=') }}
         run: |
-          echo "AERIE_IMAGE_TAG=pr-$(echo $PR_BODY | sed -n 's/.*___REQUIRES_AERIE_PR___=\"\([0-9]\+\)\".*/\1/p')" >> $GITHUB_ENV
-      - name: Extract Aerie gateway docker tag from PR body
-        # look in the PR body for eg. the string ___REQUIRES_AERIE_PR___=9999, extract the number & save to env var
+          echo "PLANDEV_IMAGE_TAG=pr-$(echo $PR_BODY | sed -n 's/.*___REQUIRES_PLANDEV_PR___=\"\([0-9]\+\)\".*/\1/p')" >> $GITHUB_ENV
+      - name: Extract PlanDev gateway docker tag from PR body
+        # look in the PR body for eg. the string ___REQUIRES_PLANDEV_PR___=9999, extract the number & save to env var
         # if backend PR is labeled correctly, it will publish a docker tag called 'pr-9999' to use in tests
         if: ${{ contains(env.PR_BODY, '___REQUIRES_GATEWAY_PR___=') }}
         run: |
           echo "GATEWAY_IMAGE_TAG=pr-$(echo $PR_BODY | sed -n 's/.*___REQUIRES_GATEWAY_PR___=\"\([0-9]\+\)\".*/\1/p')" >> $GITHUB_ENV
-      - name: Start Services (Aerie)
+      - name: Start Services (PlanDev)
         run: |
-          echo "AERIE_IMAGE_TAG: $AERIE_IMAGE_TAG"
+          echo "PLANDEV_IMAGE_TAG: $PLANDEV_IMAGE_TAG"
           echo "GATEWAY_IMAGE_TAG: $GATEWAY_IMAGE_TAG"
           docker compose -f docker-compose-test.yml up -d --quiet-pull
           docker images
@@ -107,15 +107,15 @@ jobs:
           name: E2E Test Results
           path: |
             **/e2e-test-results
-      - name: Print Logs for Services (Aerie)
+      - name: Print Logs for Services (PlanDev)
         if: always()
         run: docker compose -f docker-compose-test.yml logs -t
-      - name: Stop Services (Aerie)
+      - name: Stop Services (PlanDev)
         if: always()
         run: |
           docker ps -a
           docker compose -f docker-compose-test.yml down
           docker ps -a
-      - name: Prune Volumes (Aerie)
+      - name: Prune Volumes (PlanDev)
         if: always()
         run: docker volume prune --force

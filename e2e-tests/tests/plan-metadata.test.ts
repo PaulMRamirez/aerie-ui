@@ -51,7 +51,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
 
 test.afterAll(async ({ baseURL }) => {
   await plans.goto();
-  await userA.switchRole('aerie_admin');
+  await userA.switchRole('plandev_admin');
   await plans.deletePlan(planA.planName);
   await plans.deletePlan(planB.planName);
   await models.goto();
