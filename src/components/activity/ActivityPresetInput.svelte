@@ -129,7 +129,7 @@
 
 <style>
   .activity-preset-input-container {
-    --aerie-menu-item-template-columns: 1fr;
+    --plandev-menu-item-template-columns: 1fr;
     align-items: center;
     display: grid;
   }

@@ -727,7 +727,7 @@
   }
 
   .manual-types-menu {
-    --aerie-menu-item-padding: 8px;
+    --plandev-menu-item-padding: 8px;
     cursor: pointer;
     max-height: 320px;
     overflow: auto;

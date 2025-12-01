@@ -38,7 +38,7 @@ export class User {
     await this.page.waitForURL(`${baseURL}/login`);
   }
 
-  async switchRole(role: string = 'aerie_admin') {
+  async switchRole(role: string = 'plandev_admin') {
     await this.page.getByRole('navigation').getByRole('combobox').click();
     await this.page.getByRole('listbox').getByRole('option', { name: role }).click();
     await this.page.waitForLoadState('networkidle');

@@ -38,7 +38,7 @@ import gql from './gql';
 import { showFailureToast } from './toast';
 import type { WorkspaceApi } from './workspaces';
 
-export const ADMIN_ROLE = 'aerie_admin';
+export const ADMIN_ROLE = 'plandev_admin';
 export const VIEWER_ROLE = 'viewer';
 
 export const INVALID_JWT = 'invalid-jwt';

@@ -1,10 +1,10 @@
 # CLAUDE.md
 
-This file provides guidance for Claude Code when working with the aerie-ui codebase.
+This file provides guidance for Claude Code when working with the plandev-ui codebase.
 
 ## Project Overview
 
-Aerie UI is the client application for [Aerie](https://github.com/NASA-AMMOS/aerie), NASA's mission planning and sequencing tool. It provides a web-based interface for mission planning, activity scheduling, simulation, and sequence generation.
+PlanDev UI is the client application for [PlanDev](https://github.com/NASA-AMMOS/plandev), NASA's mission planning and sequencing tool. It provides a web-based interface for mission planning, activity scheduling, simulation, and sequence generation.
 
 ## Tech Stack
 
@@ -96,7 +96,7 @@ npm run test:e2e:with-ui # E2E tests with Playwright UI
 ### E2E Tests
 - Located in `e2e-tests/tests/`
 - Use Playwright with Chromium
-- Requires Aerie backend services running (see docker-compose-test.yml)
+- Requires PlanDev backend services running (see docker-compose-test.yml)
 - Tests run against production build in CI, dev server locally
 
 ## Commit Message Format
@@ -119,8 +119,8 @@ Follow conventional commits format:
 
 ## Backend Dependencies
 
-Aerie UI requires the Aerie backend services. For local development:
-1. Clone the [Aerie repo](https://github.com/NASA-AMMOS/aerie)
+PlanDev UI requires the PlanDev backend services. For local development:
+1. Clone the [PlanDev repo](https://github.com/NASA-AMMOS/plandev)
 2. Configure `.env` with required secrets
 3. Run services via Docker Compose
 

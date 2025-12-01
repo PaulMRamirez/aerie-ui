@@ -212,7 +212,7 @@
 
 <style>
   .view-menu {
-    --aerie-menu-item-template-columns: auto;
+    --plandev-menu-item-template-columns: auto;
     align-items: center;
     cursor: pointer;
     display: grid;
@@ -222,7 +222,7 @@
   }
 
   .toggles {
-    --aerie-menu-item-padding: 0px;
+    --plandev-menu-item-padding: 0px;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(7, min-content);

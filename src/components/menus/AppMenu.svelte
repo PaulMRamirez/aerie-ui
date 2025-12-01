@@ -23,7 +23,7 @@
     Tags,
   } from 'lucide-svelte';
   import { onMount } from 'svelte';
-  import AerieWordmarkDark from '../../assets/aerie-wordmark-dark.svg?component';
+  import PlanDevWordmarkDark from '../../assets/plandev-wordmark-dark.svg?component';
   import { SEQUENCE_EXPANSION_MODE } from '../../constants/command-expansion';
   import { SequencingMode } from '../../enums/sequencing';
   import type { User, Version } from '../../types/app';
@@ -41,7 +41,7 @@
     commit: 'unknown',
     commitUrl: '',
     date: new Date().toLocaleString(),
-    name: 'aerie-ui',
+    name: 'plandev-ui',
   };
 
   onMount(async () => {
@@ -63,7 +63,7 @@
         class="flex gap-2 bg-[#110D3D] px-2 hover:bg-primary/30 dark:bg-secondary"
         aria-label="Open Main Menu"
       >
-        <AerieWordmarkDark />
+        <PlanDevWordmarkDark />
         <ChevronDown strokeWidth={2} size={16} class="text-white" />
       </Button>
     </Popover.Trigger>
@@ -134,7 +134,7 @@
             on:click={closeMenu}
             target="_blank"
             className="text-sm py-1.5"
-            href="https://nasa-ammos.github.io/aerie-docs/"
+            href="https://nasa-ammos.github.io/plandev-docs/"
           >
             <BookOpen size={16} />
             Documentation

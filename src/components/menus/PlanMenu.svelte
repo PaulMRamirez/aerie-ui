@@ -193,7 +193,7 @@
   }
 
   .plan-menu {
-    --aerie-menu-item-template-columns: min-content;
+    --plandev-menu-item-template-columns: min-content;
     align-items: center;
     cursor: pointer;
     display: flex;

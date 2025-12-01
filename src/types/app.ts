@@ -7,7 +7,7 @@ export type BaseUser = {
   token: string;
 };
 
-export type UserRole = string | 'aerie_admin';
+export type UserRole = string | 'plandev_admin';
 
 export type User = BaseUser & {
   activeRole: UserRole;

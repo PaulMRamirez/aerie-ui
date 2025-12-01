@@ -200,7 +200,7 @@ export function copyActivityDirectivesToClipboard(sourcePlan: Plan, activities: 
   const clipboard = {
     activities: clippedActivities,
     sourcePlan: sourcePlan.id,
-    type: `aerie_activity_directives`,
+    type: `plandev_activity_directives`,
   };
 
   const noun = `Activity Directive${activities.length === 1 ? '' : 's'}`;
@@ -224,7 +224,7 @@ export async function getActivityDirectivesClipboardCount(): Promise<number> {
     const clipboardContent = await getClipboardContent();
     if (clipboardContent !== undefined) {
       const clipboard = JSON.parse(clipboardContent);
-      if (clipboard.type === 'aerie_activity_directives' && clipboard.activities !== undefined) {
+      if (clipboard.type === 'plandev_activity_directives' && clipboard.activities !== undefined) {
         return clipboard.activities.length;
       }
     }

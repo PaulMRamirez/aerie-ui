@@ -16,7 +16,7 @@ export class Extension {
                 url: "http://localhost:8080",
                 extension_roles: {
                   data: {
-                    role: aerie_admin
+                    role: plandev_admin
                   }
                 }
               }) {

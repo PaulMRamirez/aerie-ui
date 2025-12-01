@@ -75,7 +75,7 @@
 
 <style>
   .extension-menu {
-    --aerie-menu-item-template-columns: auto;
+    --plandev-menu-item-template-columns: auto;
     align-items: center;
     cursor: pointer;
     display: grid;

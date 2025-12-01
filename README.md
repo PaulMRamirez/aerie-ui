@@ -1,15 +1,15 @@
-![GitHub package.json version](https://img.shields.io/github/package-json/v/NASA-AMMOS/aerie-ui?color=brightgreen)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/NASA-AMMOS/plandev-ui?color=brightgreen)
 
-# aerie-ui
+# plandev-ui
 
-The client application for [Aerie](https://github.com/NASA-AMMOS/aerie).
+The client application for [PlanDev](https://github.com/NASA-AMMOS/plandev).
 
 <span style="display:block;text-align:center">![Example](/docs/images/Full_Example.png)</span>
 
 ## Need Help?
 
-- Join us on the [NASA-AMMOS Slack](https://join.slack.com/t/nasa-ammos/shared_invite/zt-1mlgmk5c2-MgqVSyKzVRUWrXy87FNqPw) (#aerie-users)
-- Contact aerie-support@googlegroups.com
+- Join us on the [NASA-AMMOS Slack](https://join.slack.com/t/nasa-ammos/shared_invite/zt-1mlgmk5c2-MgqVSyKzVRUWrXy87FNqPw) (#plandev-users)
+- Contact plandev-support@googlegroups.com
 
 ## Directory Structure
 

@@ -103,9 +103,9 @@
 
 <style>
   .plan-snapshot--right-content {
-    --aerie-menu-item-template-columns: auto;
-    --aerie-menu-item-line-height: 1rem;
-    --aerie-menu-item-font-size: 12px;
+    --plandev-menu-item-template-columns: auto;
+    --plandev-menu-item-line-height: 1rem;
+    --plandev-menu-item-font-size: 12px;
     align-items: center;
     display: flex;
     gap: 8px;

@@ -1,9 +1,9 @@
 import type { User } from '../../../types/app';
 
 export const mockUser: User = {
-  activeRole: 'aerie_admin',
-  allowedRoles: ['aerie_admin'],
-  defaultRole: 'aerie_admin',
+  activeRole: 'plandev_admin',
+  allowedRoles: ['plandev_admin'],
+  defaultRole: 'plandev_admin',
   id: 'test',
   permissibleQueries: {
     activity_presets: true,

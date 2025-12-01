@@ -281,7 +281,7 @@
 
 <style>
   .searchable-dropdown-container {
-    --aerie-menu-item-template-columns: 1fr;
+    --plandev-menu-item-template-columns: 1fr;
     align-items: center;
     display: grid;
     position: relative;
@@ -298,7 +298,7 @@
   }
 
   .dropdown-search :global(.st-input) {
-    background-color: var(--aerie-dropdown-background-color, var(--st-white));
+    background-color: var(--plandev-dropdown-background-color, var(--st-white));
   }
 
   .st-select.disabled {

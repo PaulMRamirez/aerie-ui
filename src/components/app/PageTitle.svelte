@@ -16,5 +16,5 @@
 </script>
 
 <svelte:head>
-  <title>{pageTitle} &#10022; Aerie</title>
+  <title>{pageTitle} &#10022; PlanDev</title>
 </svelte:head>
